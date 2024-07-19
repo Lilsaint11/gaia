@@ -3,7 +3,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 const ProjectCard = ({name,image,stacks,webLink,githubLink}) => {
     return ( 
         <div  className='w-[300px] bg-[#B5F9FD] rounded-2xl backdrop-blur-xl bg-opacity-30  flex flex-col justify-between '>
-            <div className='px-5 py-5 flex justify-center items-center relative'>
+            <div className='p-5 max-sm:p-3 flex justify-center items-center relative'>
                 <img src={image} alt="" className='w-full h-[150px] rounded-md'  />
                 <div className="absolute rounded-tl-2xl rounded-tr-2xl bg-[rgba(0,0,0,0.4)]  top-0 left-0 h-full w-full flex flex-col text-center justify-center items-center ipad:gap-10 md:gap-20 sm:gap-10 gap-5 opacity-0 hover:opacity-100 transition duration-300">             
                     <span className=" text-[12px] flex gap-1  w-full bottom-5 justify-center">

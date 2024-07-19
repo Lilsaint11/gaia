@@ -20,7 +20,7 @@ const Contact = () => {
                             <div className="flex place-items-center justify-center h-10 w-10 max-[580px]:h-7 max-[580px]:w-7 rounded-full bg-gray-200 backdrop-blur-md bg-opacity-30">
                                 <IoIosMail className="text-2xl max-[580px]:text-lg"/>
                             </div>
-                            <Link href='mailto: saintobis11@gmail.com'> <p className="text-[14px] max-[960px]:text-[12px]">stephen11@gmail.com</p></Link>       
+                            <Link href='mailto: saintobis11@gmail.com'> <p className="text-[14px] max-[960px]:text-[12px]">stephenobisesan11@gmail.com</p></Link>       
                         </div>
                         <div className="flex place-items-center gap-3">
                             <div className="flex place-items-center justify-center h-10 w-10 max-[580px]:h-7 max-[580px]:w-7 rounded-full bg-gray-200 backdrop-blur-md bg-opacity-30">
@@ -41,7 +41,6 @@ const Contact = () => {
                         </div>
                     </form>
                 </div>
-                
             </div>
             <img src="/images/sit4.png" alt="" className="absolute w-96 max-sm:w-80 -top-[235px] -right-0 max-sm:-right-28 max-lg:-right-24 z-40" />
             <img src="/images/eclipse.png" alt="" className="absolute w-[700px] max-[400px]: -bottom-32 rotate-90 -bottom-44 -left-20 z-10" />
