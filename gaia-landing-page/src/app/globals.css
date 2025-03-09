@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: jakarta;
+  src: url(/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+.jakarta {
+  font-family: jakarta;
+}
+
+
+.banner{
+  background-image: url('/hero.png');
+}
+
+.overlay{
+  background-image: url('/overlay.png');
+}
