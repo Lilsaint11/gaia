@@ -3,9 +3,9 @@ const HowItWorks = () => {
     
 
     return ( 
-        <div className='p-16 flex flex-col gap-16 items-center justify-center bg-[#F5FBF2] '>
-            <Typography sx={{ fontSize: "40px", fontWeight: "bold" }}>HOW IT WORKS</Typography>
-                <div className='flex gap-7  justfy-between '>
+        <div className='p-16 max-md:px-5 max-md:py-10 flex flex-col gap-16 max-md:gap-5 items-center justify-center bg-[#F5FBF2] '>
+            <Typography sx={{ fontSize: {xs:"35px",md:"40px"}, fontWeight: "bold" }}>HOW IT WORKS</Typography>
+                <div className='flex gap-7 max-md:gap-4  justfy-between max-lg:grid max-lg:grid-cols-2 '>
                     <Box
                         sx={{
                             width: "100%",
@@ -14,16 +14,16 @@ const HowItWorks = () => {
                             flexDirection: "column",
                             alignItems: "center",
                             px: "1.25rem", 
-                            py: "3rem",    
+                            py: {xs: "1rem" , md:"3rem"},    
                             borderRadius: "12px",
-                            gap: "1.25rem", 
+                            gap: {xs: "0.5rem" , md:"1.25rem"}, 
                             backgroundColor: "#D1EDC5",
                         }}
-                        >
+                    >
                         <Box
                             sx={{
-                            width: "4rem",
-                            height: "4rem",
+                            width: {xs:"3rem",md:"4rem"},
+                            height: {xs:"3rem",md:"4rem"},
                             borderRadius: "999px",
                             backgroundColor: "white",
                             display: "flex",
@@ -32,12 +32,12 @@ const HowItWorks = () => {
                             textAlign: "center",
                             }}
                         >
-                            <img src="/profile2.png" alt="Browse Profiles" />
+                            <img src="/search2.png" alt="search" className="max-md:w-7" />
                         </Box>
 
                         <Typography
                             sx={{
-                            fontSize: { xs: "30px", xl: "36px" },
+                            fontSize: { xs: "20px", xl: "36px" },
                             fontWeight: "500",
                             color: "#023048",
                             }}
@@ -48,7 +48,7 @@ const HowItWorks = () => {
                         <Typography
                             sx={{
                             textAlign: "center",
-                            fontSize: "18px",
+                            fontSize: {xs:"14px",md:"18px"},
                             lineHeight: "25px",
                             }}
                         >
@@ -65,16 +65,16 @@ const HowItWorks = () => {
                             flexDirection: "column",
                             alignItems: "center",
                             px: "1.25rem", 
-                            py: "3rem",    
+                            py: {xs: "1rem" , md:"3rem"}, 
                             borderRadius: "12px",
-                            gap: "1.25rem", 
+                            gap: {xs: "0.5rem" , md:"1.25rem"}, 
                             backgroundColor: "#D1EDC5",
                         }}
                         >
                         <Box
                             sx={{
-                            width: "4rem",
-                            height: "4rem",
+                            width: {xs:"3rem",md:"4rem"},
+                            height: {xs:"3rem",md:"4rem"},
                             borderRadius: "999px",
                             backgroundColor: "white",
                             display: "flex",
@@ -83,14 +83,15 @@ const HowItWorks = () => {
                             textAlign: "center",
                             }}
                         >
-                            <img src="/profile2.png" alt="Browse Profiles" />
+                            <img src="/profile2.png" alt="Browse Profiles" className="max-md:w-7" />
                         </Box>
 
                         <Typography
                             sx={{
-                                fontSize: { xs: "30px", xl: "36px" },
-                            fontWeight: "500",
-                            color: "#023048",
+                                fontSize: { xs: "20px", xl: "36px" },
+                                fontWeight: "500",
+                                color: "#023048",
+                                textAlign: "center"
                             }}
                         >
                             Browse Profiles
@@ -99,7 +100,7 @@ const HowItWorks = () => {
                         <Typography
                             sx={{
                             textAlign: "center",
-                            fontSize: "18px",
+                            fontSize: {xs:"14px",md:"18px"},
                             lineHeight: "25px",
                             }}
                         >
@@ -115,16 +116,16 @@ const HowItWorks = () => {
                         flexDirection: "column",
                         alignItems: "center",
                         px: "1.25rem",
-                        py: "3rem",
+                        py: {xs: "1rem" , md:"3rem"}, 
                         borderRadius: "12px",
-                        gap: "1.25rem",
+                        gap: {xs: "0.5rem" , md:"1.25rem"}, 
                         backgroundColor: "#D1EDC5",
                     }}
                     >
                     <Box
                         sx={{
-                        width: "4rem",
-                        height: "4rem",
+                        width: {xs:"3rem",md:"4rem"},
+                        height: {xs:"3rem",md:"4rem"},
                         borderRadius: "999px",
                         backgroundColor: "white",
                         display: "flex",
@@ -133,12 +134,12 @@ const HowItWorks = () => {
                         textAlign: "center",
                         }}
                     >
-                        <img src="/shake.png" alt="Connect" />
+                        <img src="/shake.png" alt="Connect" className="max-md:w-7" />
                     </Box>
 
                     <Typography
                         sx={{
-                        fontSize: { xs: "30px", xl: "36px" },
+                        fontSize: { xs: "20px", xl: "36px" },
                         fontWeight: "500",
                         color: "#023048",
                         }}
@@ -149,7 +150,7 @@ const HowItWorks = () => {
                     <Typography
                         sx={{
                         textAlign: "center",
-                        fontSize: "18px",
+                        fontSize: {xs:"14px",md:"18px"},
                         lineHeight: "25px",
                         }}
                     >
@@ -165,16 +166,16 @@ const HowItWorks = () => {
                         flexDirection: "column",
                         alignItems: "center",
                         px: "1.25rem",
-                        py: "3rem",
+                        py: {xs: "1rem" , md:"3rem"}, 
                         borderRadius: "12px",
-                        gap: "1.25rem",
+                        gap: {xs: "0.5rem" , md:"1.25rem"}, 
                         backgroundColor: "#D1EDC5",
                     }}
                     >
                     <Box
                         sx={{
-                        width: "4rem",
-                        height: "4rem",
+                        width: {xs:"3rem",md:"4rem"},
+                        height: {xs:"3rem",md:"4rem"},
                         borderRadius: "999px",
                         backgroundColor: "white",
                         display: "flex",
@@ -183,14 +184,15 @@ const HowItWorks = () => {
                         textAlign: "center",
                         }}
                     >
-                        <img src="/work2.png" alt="Pro-Practitioner" />
+                        <img src="/work2.png" alt="Pro-Practitioner" className="max-md:w-7" />
                     </Box>
 
                     <Typography
                         sx={{
-                        fontSize: { xs: "30px", xl: "36px" },
+                        fontSize: { xs: "20px", xl: "36px" },
                         fontWeight: "500",
                         color: "#023048",
+                        textAlign: "center"
                         }}
                     >
                         Pro-Practitioner
@@ -199,7 +201,7 @@ const HowItWorks = () => {
                     <Typography
                         sx={{
                         textAlign: "center",
-                        fontSize: "18px",
+                        fontSize: {xs:"14px",md:"18px"},
                         lineHeight: "25px",
                         }}
                     >
@@ -217,7 +219,7 @@ const HowItWorks = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        fontSize: "24px", 
+                        fontSize: {xs:"18px",md:"24px"}, 
                         backgroundColor: "#66BC45",
                         borderRadius: "8px", 
                         cursor: "pointer", 

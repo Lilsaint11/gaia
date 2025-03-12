@@ -25,18 +25,20 @@ const Services = () => {
     <Box
       sx={{
         p: "4rem",
+        px:{xs:"1rem",md:"4rem"},
         display: "flex",
         flexDirection: "column",
         gap: "4rem",
         alignItems: "center",
         justifyContent: "center",
+        width: "100%"
       }}
     >
       <Typography sx={{ fontSize: "40px", fontWeight: "bold" }}>
         OUR SERVICES
       </Typography>
 
-      <Box sx={{ display: "flex", gap: "1.25rem", justifyContent: "space-between", width: "100%" }}>
+      <Box sx={{ display: "flex", gap: "1.25rem", justifyContent: "space-between", width: "100%",overflow:"hidden",overflowX: "auto", pb:{xs:"1rem"}, }}>
         {products.map((item, index) => (
           <Box
             key={index}
@@ -53,7 +55,7 @@ const Services = () => {
           >
             <Box
               sx={{
-                width: "100%",
+                width: {xs:"200px",md:"100%"},
                 borderRadius: "999px",
                 backgroundColor: "white",
                 display: "flex",
@@ -78,7 +80,7 @@ const Services = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                px: "1.75rem", 
+                px: {xs:"0.5rem",md:"1.75rem"}, 
                 py: "0.25rem", 
                 gap: "1.25rem",
               }}
@@ -86,9 +88,10 @@ const Services = () => {
               <Typography
                 sx={{
                   textAlign: "center",
-                  fontSize: "28px",
+                  fontSize: {xs:"24px",md:"28px"},
                   lineHeight: "30px",
                   color: "#488B2E",
+                  height:{xs:"90px",md:"100%"}
                 }}
               >
                 {item.name}
@@ -108,7 +111,7 @@ const Services = () => {
                   mb: "1.25rem",
                 }}
               >
-                <Typography sx={{ color: "#488B2E", fontSize: "18px" }}>
+                <Typography sx={{ color: "#488B2E", fontSize: {xs:"10px",md:"16px"},px: {xs:"10px",md:0}, }}>
                   Find Your Practitioner
                 </Typography>
                 <EastIcon sx={{ pt: "0.25rem" }} />

@@ -4,15 +4,15 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 const Map = () => {
   return (
     <Box sx={{ position: "relative", zIndex: 50 }}>
-      <img src="/map.png" alt="Map" style={{ width: "100%" }} />
+      <img src="/map.png" alt="Map" style={{ width: "100%",objectFit:"cover" }} className="md:h-[100vh] max-md:h-[60vh]" />
 
       <Box
         sx={{
           backgroundColor: "#E7F7E1",
-          padding: "2.5rem",
-          width: "calc(100vw - 600px)",
+          padding: {xs:"1.5rem",md:"2.5rem"},
+          width: {xs:"90%",sm:"80%",md:"calc(100vw - 600px)"},
           position: "absolute",
-          top: "-10rem",
+          top: {xs:"-5rem",sm:"-10rem"},
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 50,
@@ -25,7 +25,7 @@ const Map = () => {
         }}
       >
 
-        <Typography variant="h1" sx={{ fontSize: "48px", fontWeight: "bold" }}>
+        <Typography variant="h1" sx={{ fontSize: {xs:"36px",md:"48px"}, fontWeight: "bold",textAlign:"center" }}>
           Find the Practitioner
         </Typography>
 
@@ -37,10 +37,10 @@ const Map = () => {
           </Typography>
         </Box>
 
-        <Box component="form" sx={{ width: "100%", display: "grid", gap: 2, gridTemplateColumns: "repeat(3, 1fr)" }}>
+        <Box component="form" sx={{ width: "100%", display: "grid", gap: 2, gridTemplateColumns: {xs:"repeat(2, 1fr)",sm:"repeat(3, 1fr)"} }}>
   
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            <Typography>ZIP CODE</Typography>
+            <Typography  sx={{ fontSize: {xs:"14px",md:"16px"}}}>ZIP CODE</Typography>
             <TextField
               placeholder="Enter here"
               variant="outlined"
@@ -54,7 +54,7 @@ const Map = () => {
           </Box>
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            <Typography>SELECT MILES</Typography>
+            <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>SELECT MILES</Typography>
             <Select
               value={1}
               fullWidth
@@ -71,7 +71,7 @@ const Map = () => {
           </Box>
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            <Typography>SELECT TYPE</Typography>
+            <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>SELECT TYPE</Typography>
             <Select
               value=""
               fullWidth
@@ -89,7 +89,7 @@ const Map = () => {
 
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            <Typography>SPECIALITY</Typography>
+            <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>SPECIALITY</Typography>
             <Select
               value=""
               fullWidth
@@ -107,7 +107,7 @@ const Map = () => {
 
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            <Typography>TAGS</Typography>
+            <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>TAGS</Typography>
             <Select
               value=""
               fullWidth

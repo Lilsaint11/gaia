@@ -32,6 +32,7 @@ const Products = () => {
     <Box
       sx={{
         p: "4rem",
+        px:{xs:"1rem",md:"4rem"},
         display: "flex",
         flexDirection: "column",
         gap: "4rem",
@@ -44,7 +45,7 @@ const Products = () => {
         OUR PRODUCTS
       </Typography>
 
-      <Box sx={{ display: "flex", gap: "1.25rem", justifyContent: "space-between", width: "100%" }}>
+      <Box sx={{ display: "flex", gap: "1.25rem", justifyContent: "space-between", width: "100%",overflow:"hidden",overflowX: "auto", pb:{xs:"1rem"}, }}>
         {products.map((item, index) => (
           <Box
             key={index}
@@ -56,21 +57,21 @@ const Products = () => {
               alignItems: "center",
               p: "1.25rem",
               borderRadius: "12px",
-              gap: "1.25rem",
+              gap: {xs:"1rem",md:"1.25rem"},
               backgroundColor: "white",
             }}
           >
-            <Box sx={{ width: "100%", borderRadius: "999px", backgroundColor: "white", display: "flex", alignItems: "center" }}>
+            <Box sx={{ width: {xs:"200px",md:"100%"}, borderRadius: "999px", backgroundColor: "white", display: "flex", alignItems: "center" }}>
               <img src={item.image} alt="" style={{ width: "100%" }} />
             </Box>
 
             <Typography
               sx={{
                 textAlign: "center",
-                fontSize: "18px",
+                fontSize: {xs:"16px",md:"18px"},
                 lineHeight: "25px",
                 color: "#3D3D3D",
-                height: "4rem",
+                height: {md:"4rem"},
               }}
             >
               {item.name}
@@ -78,7 +79,7 @@ const Products = () => {
 
             <Typography
               sx={{
-                fontSize: "24px",
+                fontSize: {xs:"20px",md:"24px"},
                 fontWeight: "bold",
                 color: "#488B2E",
               }}
@@ -87,7 +88,7 @@ const Products = () => {
             </Typography>
 
             <Box sx={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
-              <Rating name="read-only" value={item.rating} precision={0.5} readOnly />
+              <Rating name="read-only" value={item.rating} precision={0.5} readOnly sx={{ fontSize: {xs:"18px",md:"24px"},}} />
               <Typography>({item.rating}.0)</Typography>
             </Box>
           </Box>

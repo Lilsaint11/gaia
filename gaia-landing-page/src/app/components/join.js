@@ -9,9 +9,10 @@ const Join = () => {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#85A484",
-        py: "5rem",
-        px: "8rem", 
+        py: {xs:"2rem",md:"5rem"},
+        px:{xs:"2rem",md: "8rem"}
       }}
+      
     >
       <Box
         sx={{
@@ -19,14 +20,17 @@ const Join = () => {
           justifyContent: "space-between",
           alignItems: "center",
           gap: "5rem", 
-        }}
+            flexDirection: {xs:"column-reverse",md:"row"},
+            gap:{xs:""},
+            gap: {xs:"4rem",md:"8rem"}, 
+          }}
       >
-        <img src="/docs.png" alt="" style={{ width: "45vw" }} />
+        <img src="/docs.png" alt="" className="md:w-[45vw] max-md:w-full" />
 
         <Box sx={{ width: "100%", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
           <Typography
             sx={{
-              fontSize: "40px",
+            fontSize: {xs:"35px",md:"40px"},
               color: "#023048",
               fontWeight: "bold",
               lineHeight: "45px",
@@ -38,7 +42,7 @@ const Join = () => {
           <Typography
             sx={{
               color: "white",
-              fontSize: "20px",
+              fontSize: {xs:"16px",md:"20px"}
             }}
           >
             Join the Gaia Practitioners network and connect with<br />
@@ -56,7 +60,7 @@ const Join = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "24px",
+              fontSize: {xs:"18px",md:"24px"}, 
               backgroundColor: "#66BC45",
               borderRadius: "8px",
               width: "20rem",

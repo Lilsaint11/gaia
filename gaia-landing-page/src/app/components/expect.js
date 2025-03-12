@@ -5,25 +5,28 @@ const Expect = () => {
   return (
     <Box
       sx={{
-        my: "2.5rem", 
         backgroundColor: "#85A484",
         display: "flex",
+        flexDirection: {xs:"column",md:"row"},
         alignItems: "center",
-        justifyContent: "space-between",
-        gap: "8rem", 
-        pl: "7rem", 
+      
+        gap:{xs:""},
+        gap: {sm:"4rem",md:"8rem"}, 
+        pl: {md:"7rem"},
+        pr: {md:"0rem"},
+        px:{xs:"2rem",}
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", pt:"2rem" ,
         pb:"2rem"  }}>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-          <Typography sx={{ color: "white", fontSize: "18px" }}>
+          <Typography sx={{ color: "white", fontSize: {md:"18px"} }}>
             TAILORED CARE
           </Typography>
 
           <Typography
             sx={{
-              fontSize: "40px",
+              fontSize: {xs:"35px",md:"40px"},
               fontWeight: "bold",
               color: "#023048",
               lineHeight: "50px",
@@ -36,8 +39,8 @@ const Expect = () => {
             <Box sx={{ display: "flex", color: "white", gap: "0.75rem" }}>
               <DoneAllOutlinedIcon sx={{ color: "#3A6E27" }} />
               <Box sx={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                <Typography>Personalized Plans:</Typography>
-                <Typography>
+                <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>Personalized Plans:</Typography>
+                <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>
                   Treatments and sessions specifically tailored to your unique
                   health goals.
                 </Typography>
@@ -47,8 +50,8 @@ const Expect = () => {
             <Box sx={{ display: "flex", color: "white", gap: "0.75rem" }}>
               <DoneAllOutlinedIcon sx={{ color: "#3A6E27" }} />
               <Box sx={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                <Typography>Safe Environment:</Typography>
-                <Typography>
+                <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>Safe Environment:</Typography>
+                <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>
                   Professionals who listen to your needs and provide a safe
                   space for healing.
                 </Typography>
@@ -58,8 +61,8 @@ const Expect = () => {
             <Box sx={{ display: "flex", color: "white", gap: "0.75rem" }}>
               <DoneAllOutlinedIcon sx={{ color: "#3A6E27" }} />
               <Box sx={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                <Typography>Long-Term Wellness:</Typography>
-                <Typography>
+                <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>Long-Term Wellness:</Typography>
+                <Typography sx={{ fontSize: {xs:"14px",md:"16px"}}}>
                   Many of our practitioners work with you on a long-term basis
                   to ensure lasting wellness and vitality.
                 </Typography>
@@ -69,7 +72,7 @@ const Expect = () => {
         </Box>
       </Box>
 
-      <img src="/woman.png" alt="" style={{ width: "55%" }} />
+      <img src="/woman.png" alt="" className="lg:w-[55%] max-sm:w-full max-md:-mr-[60px]" />
     </Box>
   );
 };

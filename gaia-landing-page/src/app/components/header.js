@@ -7,15 +7,16 @@ const Header = () => {
     <Box
       sx={{
         display: "flex",
+        flexDirection:{xs:"column",md:"row"},
         justifyContent: "space-between",
-        alignItems: "center",
-        px: 5,
+        alignItems: {md:"center"},
+        px: {xs:2,md:5},
         py: 2,
       }}
     >
-      <img src="/logo.png" alt="logo" style={{ objectFit: "contain" }} />
+      <img src="/logo.png" alt="logo" className="max-md:w-[150px]" style={{ objectFit: "contain" }} />
 
-      <Box sx={{ display: "flex", alignItems: "center", gap: 2, height: 48 }}>
+      <Box sx={{ display: "flex", alignItems: "center", gap: {xs:1,sm:2}, height: 48 }}>
         <Select
           value=""
           displayEmpty

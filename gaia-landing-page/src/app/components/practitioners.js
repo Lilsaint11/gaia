@@ -40,23 +40,27 @@ const Practitioners = () => {
     return ( 
         <Box
         sx={{
-            p: { xs: "5rem", sm: "2rem" },      
+            p: { xs: "0.5rem", sm: "2rem" }, 
+            pt: { xs: "1.5rem", sm: "2rem" },      
           display: "flex",
           flexDirection: "column",
-          gap: "4rem",      
-          alignItems: "center",
+          gap: {xs:"1rem",md:"4rem"},      
+          alignItems: {md:"center"},
           justifyContent: "center",
         }}
       >
       
-            <Typography sx={{ fontSize: "40px", fontWeight: "bold" }}>
+            <Typography sx={{ fontSize: {xs:"35px",md:"40px"},textAlign:"center", fontWeight: "bold" }}>
             OUR TOP PRACTITIONERS
             </Typography>
 
             <Box
                 sx={{
-                display: "flex",
-                gap: "10px",      
+                display:"flex",
+                gap: "10px",  
+                overflow:"hidden",
+                overflowX: "auto" , 
+                width:"100%"  
                 }}
             >
             {practitioners.map((practitioner, index) => (
@@ -66,13 +70,15 @@ const Practitioners = () => {
                   width: "100%",
                   boxShadow: "0 10px 15px -3px rgba(203, 213, 225, 0.5)", 
                   display: "flex",
+                  display: "flex",
+                    flexDirection: {xs:"column",md:"row"},
                   justifyContent: "space-between",
                   p: "1.75rem",       
                   gap: "1.25rem",     
                   borderRadius: "1rem", 
                 }}
               >              
-                <Box sx={{ width: "100%" }}>
+                <Box sx={{ width: "100%", }}>
                     <Box
                         sx={{
                         backgroundColor: "#E7F7E1",
@@ -85,7 +91,7 @@ const Practitioners = () => {
                         width: "100%",
                         }}
                     >
-                        <Box sx={{ position: "relative", width: "100%" }}>
+                        <Box sx={{ position: "relative", width: {xs:"250px",md:"100%"}, }}>
                         <img
                             src={practitioner.image}
                             alt=""
@@ -104,6 +110,7 @@ const Practitioners = () => {
                             color: "#fff",
                             px: 1,
                             py: 0.5,
+                            fontSize:{xs:"18px",md:"16px"},
                             }}
                         >
                             Recommended
@@ -113,7 +120,7 @@ const Practitioners = () => {
                         {practitioner.remote && (
                         <Typography
                             sx={{
-                            
+                            fontSize:{xs:"18px",md:"16px"},
                             mt: 1,
                             px: 1.5,
                             py: 0,
@@ -134,7 +141,7 @@ const Practitioners = () => {
                             color: "#488B2E",
                             textTransform: "capitalize",
                             fontWeight: "600",
-                            fontSize: "36px"
+                            fontSize: {xs:"28px",md:"36px"}
                         }}
                         >
                         {practitioner.name}
@@ -142,7 +149,7 @@ const Practitioners = () => {
 
                     <Typography
                         sx={{
-                            fontSize: "26px",
+                                fontSize: {xs:"22px",md:"26px"},
                             color: "#12270C"
                         }}
                         >
@@ -175,7 +182,7 @@ const Practitioners = () => {
                                 px: 2,
                                 py: 0.5,
                                 borderRadius: "999px", 
-                                fontSize: "16px",
+                                fontSize:{xs:"16px",md:"16px"},
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
@@ -186,7 +193,7 @@ const Practitioners = () => {
                         ))}
                         </Box>
 
-                        <Box sx={{  gap: 2, display: "flex", justifyContent: "flex-end", alignItems: "center", mt: 6 }}>
+                        <Box sx={{  gap: 2, display: "flex",flexDirection:{xs:"column",md:"row"}, justifyContent: "flex-end", alignItems: "center", mt: 6 }}>
                             <Box
                                 sx={{
                                 backgroundColor: "#66BC45",
@@ -200,9 +207,10 @@ const Practitioners = () => {
                                 alignItems: "center",
                                 gap: 2,
                                 cursor: "pointer",
+                                width:"100%"
                                 }}
                             >
-                                <Typography>Schedule a Meeting</Typography>
+                                <Typography sx={{ fontSize:{xs:"16px",md:"16px"},}}>Schedule a Meeting</Typography>
                                 <ArrowOutwardOutlinedIcon />
                             </Box>
 
@@ -219,9 +227,10 @@ const Practitioners = () => {
                                 alignItems: "center",
                                 gap: 2,
                                 cursor: "pointer",
+                                width:{xs:"100%",md:"80%"}
                                 }}
                             >
-                                <Typography>View Profile</Typography>
+                                <Typography sx={{ fontSize:{xs:"16px",md:"16px"},}}>View Profile</Typography>
                                 <Person2OutlinedIcon />
                             </Box>
                             </Box>

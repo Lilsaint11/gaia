@@ -5,7 +5,7 @@ const Hero = () => {
     <Box
       sx={{
         position: "relative",
-        height: "calc(100vh + 200px)",
+        height:  {xs:"70vh",sm:"100vh",md:"calc(100vh + 200px)"},
         width: "100vw",
       }}
     >
@@ -30,11 +30,11 @@ const Hero = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: 6,
+          gap: {xs:4,md:6},
           height: "100%",
           width: "100vw",
-          padding: "4rem",
-          paddingTop: "10rem",
+          padding: {xs:"2rem",md:"4rem"},
+          paddingTop: {xs:"5rem",md:"10rem"},
           position: "relative",
           zIndex: 50,
           backgroundRepeat: "no-repeat",
@@ -42,15 +42,15 @@ const Hero = () => {
       >
    
         <Box sx={{ color: "#023048", zIndex: 50 }}>
-          <Typography variant="h6" sx={{ fontSize: "24px" }}>
+          <Typography variant="h6" sx={{ fontSize: {xs:"20px",md:"24px"} }}>
             WELCOME TO GAIA HEALERS
           </Typography>
 
           <Typography
             variant="h1"
             sx={{
-              fontSize: "64px",
-              lineHeight: "80px",
+              fontSize: {xs:"46px",sm:"56px",md:"64px"},
+              lineHeight: {xs:"65px",md:"80px"},
               fontWeight: "bold",
             }}
           >
@@ -78,12 +78,12 @@ const Hero = () => {
             justifyContent: "center",
             borderRadius: "10px",
             padding:"10px",
-            height: "4rem",
-            width: "19rem",
+            height: {xs:"3rem",md:"4rem"},
+            width:  {xs:"17rem",md:"19rem"},
             backgroundColor: "#66BC45",
             color: "white",
             textTransform: "none",
-            fontSize: "24px",
+            fontSize: {xs:"20px",md:"24px"},
             "&:hover": {
               backgroundColor: "#58A73C",
             },

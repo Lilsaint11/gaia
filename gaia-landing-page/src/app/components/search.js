@@ -10,6 +10,7 @@ const Search = () => {
         alignItems: "center",
         backgroundColor: "#85A484",
         py: "5rem", 
+        px:"2rem"
       }}
     >
       <Box
@@ -22,12 +23,12 @@ const Search = () => {
           backgroundColor: "white",
           p: "2.5rem", 
           borderRadius: "12px",
-          width: "55vw",
+          width: {md:"55vw"},
         }}
       >
         <Typography
           sx={{
-            fontSize: "40px",
+            fontSize: {xs:"30px",md:"40px"},
             fontWeight: "bold",
             textAlign: "center",
           }}
@@ -38,7 +39,7 @@ const Search = () => {
         <Typography
           sx={{
             color: "#64748B",
-            fontSize: "20px",
+            fontSize:  {xs:"14px",md:"20px"},
             textAlign: "center",
           }}
         >
@@ -57,10 +58,11 @@ const Search = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "24px",
+            fontSize:  {xs:"18px",md:"24px"},
             backgroundColor: "#66BC45",
             borderRadius: "8px",
             cursor: "pointer",
+            textAlign:"center"
           }}
         >
           Search for a Practitioner Now

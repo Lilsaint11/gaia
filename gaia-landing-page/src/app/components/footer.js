@@ -10,14 +10,14 @@ const Footer = () => {
         flexDirection: "column",
         alignItems: "center",
         gap: "2.5rem",
-        p: "4rem",
+        p: {xs:"2rem",md:"4rem"},
         pb: "2rem",
       }}
     >
-      <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-          <img src="/logo2.png" alt="" style={{ width: "250px" }} />
-          <Typography sx={{ fontSize: "20px", color: "#1D1D1D" }}>
+      <Box sx={{ display: "flex",flexDirection:{xs:"column",md:"row"}, justifyContent: "space-between", width: "100%",gap:{xs:"3rem",md:"3rem"} }}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: {xs:"1rem",md:"1.25rem"} }}>
+          <img src="/logo2.png" alt="" className="max-sm:w-[150px] sm:w-[250px]" />
+          <Typography sx={{ fontSize: {xs:"16px",md:"20px"}, color: "#1D1D1D" }}>
             You are just one scan away<br />
             from finding your optimal<br />
             energy wellness instead of<br />
@@ -61,8 +61,8 @@ const Footer = () => {
               <Box
                 key={index}
                 sx={{
-                  width: "3rem",
-                  height: "3rem",
+                width: {xs:"2rem",md:"3rem"},
+                height: {xs:"2rem",md:"3rem"},
                   borderRadius: "999px",
                   backgroundColor: "white",
                   display: "flex",
@@ -71,27 +71,27 @@ const Footer = () => {
                   color: "#66BC45",
                 }}
               >
-                <img src={icon} alt="" />
+                <img src={icon} alt="" className="max-sm:w-[12px]" />
               </Box>
             ))}
           </Box>
         </Box>
+        <Box sx={{ display: "flex", justifyContent: {md:"center"}, width:"100%",gap:{xs:"20px"} }}>
+          <Box sx={{ display: "flex", flexDirection: "column", width:"100%", gap: "1.25rem", color: "#1D1D1D", fontSize: "18px !important", fontWeight: "600", }}>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"},fontWeight: "600"}}>Home</Typography>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"}, fontWeight: "600"}}>Products</Typography>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"},fontWeight: "600"}}>Bio-Well Demo</Typography>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"},fontWeight: "600"}}>Become an Affiliate</Typography>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"},fontWeight: "600"}}>Find a Practitioner</Typography>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"},fontWeight: "600"}}>Education</Typography>
+          </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "#1D1D1D", fontSize: "18px !important", fontWeight: "600", }}>
-          <Typography sx={{fontSize: "18px",fontWeight: "600"}}>Home</Typography>
-          <Typography sx={{fontSize: "18px", fontWeight: "600"}}>Products</Typography>
-          <Typography sx={{fontSize: "18px",fontWeight: "600"}}>Bio-Well Demo</Typography>
-          <Typography sx={{fontSize: "18px",fontWeight: "600"}}>Become an Affiliate</Typography>
-          <Typography sx={{fontSize: "18px",fontWeight: "600"}}>Find a Practitioner</Typography>
-          <Typography sx={{fontSize: "18px",fontWeight: "600"}}>Education</Typography>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "#1D1D1D", fontSize: {xs:"15px",md:"18px"}, fontWeight: "700" }}>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"},fontWeight: "600"}}>Bio-Well Research</Typography>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"}, fontWeight: "600"}}>Blogs</Typography>
+            <Typography sx={{fontSize: {xs:"15px",md:"18px"}, fontWeight: "600"}}>Contact</Typography>
+          </Box>
         </Box>
-
-        <Box sx={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "#1D1D1D", fontSize: "18px", fontWeight: "700" }}>
-          <Typography sx={{fontSize: "18px",fontWeight: "600"}}>Bio-Well Research</Typography>
-          <Typography sx={{fontSize: "18px", fontWeight: "600"}}>Blogs</Typography>
-          <Typography sx={{fontSize: "18px", fontWeight: "600"}}>Contact</Typography>
-        </Box>
-
         <Box
           sx={{
             backgroundColor: "white",
@@ -101,7 +101,7 @@ const Footer = () => {
             display: "flex",
             flexDirection: "column",
             gap: "0.5rem",
-            width: "25rem",
+            width: {xs:'100%',md:"100%"},
           }}
         >
           <Typography sx={{ fontSize: "30px", fontWeight: "600" }}>NEWS LETTER</Typography>
@@ -110,7 +110,7 @@ const Footer = () => {
             exclusive offers.
           </Typography>
 
-          <Box sx={{ mt: "1rem", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+          <Box sx={{ mt: "1rem", display: "flex", flexDirection: "column", gap: "1.25rem",width:"100%" }}>
           <TextField
             placeholder="Enter your email"
             variant="outlined"
@@ -151,16 +151,27 @@ const Footer = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          flexDirection:{xs:"column",md:"row"},
           gap: "1.25rem",
           color: "#12270C",
           width: "100%",
           pt: "2rem",
           borderTop: "1px solid #DBCDFF",
+          fontSize:{xs:"14px",md:"16px"}
         }}
       >
-        <Typography>© COPYRIGHT © 2025 INC. ALL RIGHTS RESERVED.</Typography>
-        <Typography sx={{ textDecoration: "underline" }}>Privacy</Typography>
-        <Typography sx={{ textDecoration: "underline" }}>Terms</Typography>
+        <Typography sx={{ fontSize:{xs:"14px",md:"16px"}, textAlign:"center"}}>© COPYRIGHT © 2025 INC. ALL RIGHTS RESERVED.</Typography>
+        <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "1.25rem",
+        }}
+      >
+        <Typography sx={{ textDecoration: "underline", fontSize:{xs:"14px",md:"16px"} }}>Privacy</Typography>
+        <Typography sx={{ textDecoration: "underline", fontSize:{xs:"14px",md:"16px"} }}>Terms</Typography>
+        </Box>
       </Box>
     </Box>
   );
